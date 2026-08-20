@@ -53,6 +53,7 @@ public sealed class DefaultMessageField : DviZeConsoleTemplate, IMessageComponen
             {
                 var computedValue = logEntry.MessageFormatter(logEntry.State, logEntry.Exception);
                 this.computedValue = !string.IsNullOrEmpty(computedValue) ? computedValue : null;
+                didCompute = true;
             }
             return computedValue;
         }

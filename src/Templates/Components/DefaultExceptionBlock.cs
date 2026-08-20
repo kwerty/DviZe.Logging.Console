@@ -58,6 +58,7 @@ public sealed class DefaultExceptionBlock : DviZeConsoleTemplate, IExceptionComp
             {
                 var computedValue = logEntry.Exception?.ToString();
                 this.computedValue = !string.IsNullOrEmpty(computedValue) ? computedValue : null;
+                didCompute = true;
             }
             return computedValue;
         }

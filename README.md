@@ -1,10 +1,10 @@
 # DviZeConsole
 
-A `ConsoleFormatter` for the .NET `ConsoleLoggerProvider`, unlocking deep customization without sacrificing hot-path performance.
+A custom formatter for the .NET `ConsoleLoggerProvider`, unlocking deep customization and extensibility without sacrificing hot-path performance.
 
 📐 Templates let you decide which fields get written to the console, and how they're written.
 
-🧩 Composers execute before the template is written, enabling per-entry customization, and surfacing information normally hidden away in log entry state (`TState`) or structured logging key/value pairs.
+🧩 Composers execute before the template is written, enabling per-entry customization, and surfacing information normally hidden away in log entry state (`TState`) and structured logging key/value pairs.
 
 ✂️ Built-in `StripNamespaceComposer` lets you strip namespaces down to what matters, eg.. `Kwerty.DviZe.Win.Hooks` becomes `Win.Hooks`.
 
