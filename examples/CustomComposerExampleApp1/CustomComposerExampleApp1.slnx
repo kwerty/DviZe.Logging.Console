@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../../src/DviZe.Logging.Console.csproj" />
+  <Project Path="CustomComposerExampleApp1.csproj" />
+</Solution>
