@@ -28,5 +28,14 @@ public class CustomComposer : DviZeConsoleComposer, IDviZeConsoleComposer<IDefau
             template.Scope.AddItem($"Some value: {customLogState.SomeValue}");
             template.Scope.AddItem($"Some other value: {customLogState.SomeOtherValue}");
         }
+
+        // Redacting sensitive information.
+
+        if (logEntry.State is SensitiveLogState sensitiveLogState
+            && sensitiveLogState.ContainsSensitiveMaterial)
+        {
+            template.Painter.BackgroundColor = DviZeConsoleColor.DarkGray;
+            template.Message.Value = "[Redacted]";
+        }
     }
 }

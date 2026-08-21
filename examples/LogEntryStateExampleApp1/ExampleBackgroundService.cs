@@ -21,7 +21,15 @@ public class ExampleBackgroundService(ILogger<ExampleBackgroundService> logger) 
             SomeValue = "Some value",
             SomeOtherValue = true,
         };
-        logger.Log(LogLevel.Information, eventId: 0, customLogState, exception: null, (_, _) => "Log message with custom log state.");
+        logger.Log(LogLevel.Information, eventId: 0, customLogState, exception: null, static  (_, _) => "Log message with custom log state.");
+
+        await Task.Delay(1000);
+
+        var sensitiveLogState = new SensitiveLogState
+        {
+            ContainsSensitiveMaterial = true,
+        };
+        logger.Log(LogLevel.Information, eventId: 0, sensitiveLogState, exception: null, static (_, _) => "This message contains sensitive material.");
 
         logger.LogInformation("Done.");
     }
