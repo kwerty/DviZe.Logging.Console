@@ -1,4 +1,4 @@
-﻿namespace StructuredDataExampleApp1;
+﻿namespace LogEntryStateExampleApp1;
 
 public class CustomLogState
 {

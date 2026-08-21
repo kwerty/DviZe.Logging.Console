@@ -2,13 +2,13 @@
 using Kwerty.DviZe.Logging.Console.Templates;
 using System.Collections.Generic;
 
-namespace StructuredDataExampleApp1;
+namespace LogEntryStateExampleApp1;
 
 public class CustomComposer : DviZeConsoleComposer, IDviZeConsoleComposer<IDefaultTemplate>
 {
     public void Compose<TState>(in DviZeConsoleLogEntry<TState> logEntry, IDefaultTemplate template)
     {
-        // Extracting structured data and displaying it in the scope block.
+        // Extracting structured logging key/value pairs and displaying them in the scope block.
 
         if (logEntry.State is IReadOnlyList<KeyValuePair<string, object>> keyValuePairs)
         {
@@ -21,7 +21,7 @@ public class CustomComposer : DviZeConsoleComposer, IDviZeConsoleComposer<IDefau
             }
         }
 
-        // Extracting data from a custom TState and displaying it in the scope block.
+        // Extracting data from log entry TState and displaying it in the scope block.
 
         if (logEntry.State is CustomLogState customLogState)
         {

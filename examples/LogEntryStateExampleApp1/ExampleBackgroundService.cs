@@ -4,7 +4,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace StructuredDataExampleApp1;
+namespace LogEntryStateExampleApp1;
 
 public class ExampleBackgroundService(ILogger<ExampleBackgroundService> logger) : BackgroundService
 {
