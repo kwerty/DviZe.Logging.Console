@@ -1,6 +1,6 @@
 # DviZeConsole
 
-A custom formatter for the .NET `ConsoleLoggerProvider`, unlocking extensive customization without sacrificing hot-path performance.
+A custom `ConsoleFormatter` for the .NET `ConsoleLoggerProvider`, unlocking extensive customization without sacrificing hot-path performance.
 
 📐 Templates let you decide which fields get written to the console, and how they're written.
 
